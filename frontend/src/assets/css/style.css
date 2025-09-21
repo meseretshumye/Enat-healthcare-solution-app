@@ -333,7 +333,7 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
   margin: 0 auto;
   width: 80px;
   height: 80px;
@@ -580,13 +580,16 @@ h6 {
     font-size: 36px;
   }
   .hero-content a.main-btn {
-    display: inline-block;
+    display: inline-block ;
+    margin-right: 12px !important;
+  
   }
 
   .hero-content a.main-btn-light {
-    display: inline-block;
-    margin-left: 12px;
-    margin-top: 0;
+    display: inline-block ;
+    margin: 0 0 0 12px !important;
+    padding: 12px 24px !important;
+    
   }
 }
 @media (min-width: 768px) {

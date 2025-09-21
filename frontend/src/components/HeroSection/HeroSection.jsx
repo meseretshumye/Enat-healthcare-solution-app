@@ -1,40 +1,43 @@
 import React from "react";
+import logoIcon from "../../assets/icons/BMI-Icons/logo.svg"; // optional logo import
 
-const HeroSection = () => {
+const HeroSection = ({ onClickBmi }) => {
   return (
-    <>
-      {/* ======= hero section start ======= */}
-      <section id="hero" className="hero-section">
-        <section className="hero-section-container">
-          <section className="hero-content">
-            <h1>
-              Where Care Meets Compassion—Like a <em>Mother's Embrace.</em>
-            </h1>
-            <p>
-              At Enat Health Care Solutions, we believe everyone deserves
-              compassionate, comprehensive care. Our philosophy is simple:
-              <strong>
-                <em>"Where Care Meets Compassion—Like a Mother's Embrace."</em>
-              </strong>
-              Health is more than treatment; it’s about nurturing each person,
-              just as a mother cares for her child.
-            </p>
-            <a href="index.html#appointment" className="main-btn">
+    <section id="hero" className="hero-section">
+      <div className="hero-section-container">
+        <div className="hero-content">
+          {/* Optional Logo */}
+          <img
+            src={logoIcon}
+            alt="Enat Health Care Logo"
+            className="hero-logo"
+          />
+
+          <h1>
+            Where Care Meets Compassion—Like a <em>Mother's Embrace.</em>
+          </h1>
+          <p>
+            At Enat Health Care Solutions, we believe everyone deserves
+            compassionate, comprehensive care. Our philosophy is simple:{" "}
+            <strong>
+              <em>"Where Care Meets Compassion—Like a Mother's Embrace."</em>
+            </strong>{" "}
+            Health is more than treatment; it’s about nurturing each person,
+            just as a mother cares for her child.
+          </p>
+
+          <div className="hero-buttons">
+            <a href="#appointment" className="main-btn">
               Make An Appointment
             </a>
-            <a
-              href="calcBmi.html"
-              target="_blank"
-              rel="no-referrer"
-              className="main-btn-light"
-            >
+
+            <button className="main-btn-light" onClick={onClickBmi}>
               Calculate BMI
-            </a>
-          </section>
-        </section>
-      </section>
-      {/* ======= hero section end =======  */}
-    </>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

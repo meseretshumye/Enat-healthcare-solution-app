@@ -4,24 +4,24 @@ const AboutUs = () => {
   return (
     <>
       {/* ======= about us section start =======  */}
-      <section id="about" class="about-us-section p-block-70">
+      <section id="about" className="about-us-section p-block-70">
         {/* ======= section title start =======  */}
-        <section class="section-title">
+        <section className="section-title">
           <h2>About Us</h2>
           <p>Nurturing Health with a Heartfelt Commitment.</p>
         </section>
         {/* ======= section title end ======= - */}
 
         {/* ======= about us main section =======  */}
-        <section class="about-us-container container">
-          <section class="row g-4">
-            <section class="col-12 col-lg-6">
-              <section class="about-us-image">
+        <section className="about-us-container container">
+          <section className="row g-4">
+            <section className="col-12 col-lg-6">
+              <section className="about-us-image">
                 <img src={AboutUsImg} alt="about-us-image" />
               </section>
             </section>
-            <section class="col-12 col-lg-6">
-              <section class="about-us-content">
+            <section className="col-12 col-lg-6">
+              <section className="about-us-content">
                 <h3>
                   Dedicated to providing exceptional healthcare services and
                   support.
@@ -33,7 +33,7 @@ const AboutUs = () => {
                 </p>
                 <ul>
                   <li>
-                    <i class="fa-solid fa-check-double"></i>
+                    <i className="fa-solid fa-check-double"></i>
                     <span>
                       <strong>Comprehensive Services: </strong>We offer a wide
                       range of medical services to cater to diverse health
@@ -41,7 +41,7 @@ const AboutUs = () => {
                     </span>
                   </li>
                   <li>
-                    <i class="fa-solid fa-check-double"></i>
+                    <i className="fa-solid fa-check-double"></i>
                     <span>
                       <strong>Patient-Centric Approach: </strong> Our focus is
                       on understanding and meeting the individual needs of each
@@ -49,7 +49,7 @@ const AboutUs = () => {
                     </span>
                   </li>
                   <li>
-                    <i class="fa-solid fa-check-double"></i>
+                    <i className="fa-solid fa-check-double"></i>
                     <span>
                       <strong>Community Engagement: </strong>We actively
                       participate in community health initiatives to promote
@@ -57,7 +57,7 @@ const AboutUs = () => {
                     </span>
                   </li>
                   <li>
-                    <i class="fa-solid fa-check-double"></i>
+                    <i className="fa-solid fa-check-double"></i>
                     <span>
                       <strong>Compassionate Care: </strong> Our staff embodies
                       the values of empathy and respect in every interaction.
