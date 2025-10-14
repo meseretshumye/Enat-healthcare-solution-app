@@ -15,7 +15,7 @@ import raceIcon from "../../assets/icons/BMI-Icons/icon-race.svg";
 
 const BmiCalculator = () => {
   return (
-    <section id="bmi-calculator">
+    <section className="bmi-calc-section" id="bmi-calc-section">
       {/* Blue Shape */}
       <div className="blue-shape"></div>
 

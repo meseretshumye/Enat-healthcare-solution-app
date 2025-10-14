@@ -1,5 +1,6 @@
+import { NavLink, Outlet } from "react-router";
 
-import { Link } from "react-router";
+// import { Link, Outlet } from "react-router-dom"; // ✅ correct import
 
 const UsersProfile = () => {
   const users = [
@@ -19,10 +20,21 @@ const UsersProfile = () => {
           <ul className="list-unstyled ">
             {users?.map((user) => (
               <li className="py-2" key={user.id}>
-                <Link to={`/user.profile/${user.id}`}>{user.fullName}</Link>
+                <NavLink
+                  to={`/usersProfile/${user.id}`}
+                  className={({ isActive }) =>
+                    isActive ? "text-warning fw-bold" : ""
+                  }
+                >
+                  {user.fullName}
+                </NavLink>
               </li>
             ))}
           </ul>
+        </div>
+        <div className="col-6">
+          {/* ✅ Outlet will render nested route here */}
+          <Outlet />
         </div>
       </div>
     </div>

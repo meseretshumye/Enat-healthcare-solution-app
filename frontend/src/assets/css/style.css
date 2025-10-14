@@ -157,8 +157,8 @@ h6 {
   opacity: 0.8;
 }
 
-.hero-content a.main-btn-light {
-  display: block;
+.hero-content .main-btn-light {
+  display: inline;
   color: #030a21;
   border: 1px solid transparent;
   border-image: var(--main-gradient) 1;
@@ -168,7 +168,7 @@ h6 {
   padding: 12px 24px !important;
   transition: var(--transition);
   border-radius: 4px;
-  margin-top: 12px;
+  margin: 0 0 0 12px !important;
   text-align: center;
 }
 .hero-content a.main-btn:hover {
@@ -531,31 +531,30 @@ h6 {
 .sub-footer-links-container .social-media-link-lists li a i:hover {
   opacity: 1;
 }
+
 /* ******4O4 page section css***** */
-.container{
+.container {
   max-width: 992px !important;
 }
-.not-found-page-section div.main-btn{
-display: block;
-width: 210px;
-color: #fff;
-background: var(--main-gradient);
-font-family: var(--secondary-font-family);
-text-transform: capitalize;
-padding: 12px 24px !important;
-border-radius: 4px;
-text-align: center;
+.not-found-page-section div.main-btn {
+  display: block;
+  width: 210px;
+  color: #fff;
+  background: var(--main-gradient);
+  font-family: var(--secondary-font-family);
+  text-transform: capitalize;
+  padding: 12px 24px !important;
+  border-radius: 4px;
+  text-align: center;
 }
 
-.not-found-page-section div.main-btn a{
+.not-found-page-section div.main-btn a {
   color: #fff;
   text-align: center;
   max-width: none;
-  
 }
-.not-found-page-section div.main-btn a:hover{
+.not-found-page-section div.main-btn a:hover {
   color: #fff;
-
 }
 /* mobile device footer css */
 .md-footer-links-wrapper .accordion .accordion-item {
