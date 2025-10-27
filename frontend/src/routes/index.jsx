@@ -17,7 +17,6 @@ const AppRoutes = () => {
           <Route index element={<Home />} />
           <Route path="/BmiCalculator" element={<BmiCalculator />} />
           <Route path="/Contact" element={<h1>Contact Page</h1>} />
-
           <Route path="/About" element={<AboutUs />} />
           <Route path="/doctors" element={<h1>Doctors Page</h1>} />
           <Route path="/services" element={<ServiceSection />} />

@@ -1,7 +1,4 @@
 import { NavLink, Outlet } from "react-router";
-
-// import { Link, Outlet } from "react-router-dom"; // ✅ correct import
-
 const UsersProfile = () => {
   const users = [
     { id: 1, fullName: "Alex Johnson" },

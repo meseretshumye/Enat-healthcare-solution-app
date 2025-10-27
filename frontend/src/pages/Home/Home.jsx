@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import HeroSection from "../../components/HeroSection/HeroSection";
 import BmiCalculator from "../../components/BmiCalulator/BmiCalculator";
 import AboutUs from "../../components/AboutUs/AboutUs";
-import ServiceSection from "../../components/Services/ServiceSection/ServiceSection"; 
+import ServiceSection from "../../components/Services/ServiceSection/ServiceSection";
 import HotLine from "../../components/HotLine/HotLine";
 const Home = () => {
   const [showBmi, setShowBmi] = useState(false);
@@ -19,9 +19,15 @@ const Home = () => {
 
   return (
     <>
+      {/* hero section */}
       <HeroSection onClickBmi={handleShowBmi} />
+      {/* AboutUs section */}
       <AboutUs />
+
+      {/* HotLine section */}
       <HotLine />
+
+      {/* ServiceSection section */}
       <ServiceSection />
 
       {/* Render BMI only when showBmi is true */}

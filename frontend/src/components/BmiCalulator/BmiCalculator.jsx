@@ -183,7 +183,7 @@ const BmiCalculator = () => {
               <p>
                 Expectant mothers experience weight gain due to their growing
                 baby. Maintaining a healthy pre-pregnancy BMI is advisable to
-                minimise health risks for both mother and child.
+                minimize health risks for both mother and child.
               </p>
             </div>
 
