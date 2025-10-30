@@ -1,8 +1,10 @@
-import Home from "./pages/Home/Home";
+import AppRoutes from "./routes";
+import { Slide, ToastContainer } from "react-toastify";
 function App() {
   return (
     <>
-      <Home />
+      <ToastContainer autoClose={3000} theme="colored" transition={Slide} />
+      <AppRoutes />
     </>
   );
 }

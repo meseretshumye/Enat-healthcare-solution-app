@@ -108,7 +108,7 @@ select {
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
+/* @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
   }
@@ -120,7 +120,7 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
+} */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -129,7 +129,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type="number"] {
+/* input[type="number"] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
@@ -166,7 +166,7 @@ input[type="number"]::placeholder {
 label {
   display: block;
   cursor: pointer;
-}
+} */
 
 body {
   min-height: 100vh;
@@ -243,6 +243,24 @@ body {
   background-color: hsl(0, 0%, 100%);
   padding: 1.5rem;
   gap: 1.5rem;
+}
+
+.form-side #btn-submit {
+  display: block;
+  color: #fff;
+  background: linear-gradient(to right, #244cfd, #15e4fd);
+  font-family: "Inter", sans-serif !important;
+  text-transform: capitalize;
+  font-weight: 400;
+  padding: 16px 24px !important;
+  border-radius: 8px;
+  text-align: center;
+  outline: 0;
+  border: 0;
+}
+.form-side #btn-submit:hover {
+  color: #fff;
+  opacity: 0.8;
 }
 .calcBmi-hero-section .form-side .radios {
   display: flex;
@@ -530,7 +548,8 @@ body {
   justify-content: center;
   flex-direction: row;
   gap: 1rem;
-} 
+} /*# sourceMappingURL=main.css.map */
+
 /*ONLY TABLET SIZE*/
 @media screen and (min-width: 48rem) {
   .calcBmi-hero-section {

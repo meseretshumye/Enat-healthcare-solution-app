@@ -1,5 +1,6 @@
 import React from "react";
 import logoIcon from "../../assets/icons/BMI-Icons/logo.svg"; // optional logo import
+import { Link } from "react-router";
 
 const HeroSection = ({ onClickBmi }) => {
   return (
@@ -27,13 +28,16 @@ const HeroSection = ({ onClickBmi }) => {
           </p>
 
           <div className="hero-buttons">
-            <a href="#appointment" className="main-btn">
+            <Link to="/appointment" className="main-btn">
               Make An Appointment
-            </a>
+            </Link>
 
-            <button className="main-btn-light" onClick={onClickBmi}>
+            {/* <button className="main-btn-light" onClick={onClickBmi}>
               Calculate BMI
-            </button>
+            </button> */}
+            <Link className="main-btn-light" to="/BmiCalculator">
+              BmiCalculator
+            </Link>
           </div>
         </div>
       </div>
