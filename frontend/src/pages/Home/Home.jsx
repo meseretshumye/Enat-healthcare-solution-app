@@ -4,6 +4,7 @@ import BmiCalculator from "../../components/BmiCalulator/BmiCalculator";
 import AboutUs from "../../components/AboutUs/AboutUs";
 import ServiceSection from "../../components/Services/ServiceSection/ServiceSection";
 import HotLine from "../../components/HotLine/HotLine";
+import Blogs from "../../components/Blogs/Blogs";
 const Home = () => {
   const [showBmi, setShowBmi] = useState(false);
 
@@ -21,6 +22,8 @@ const Home = () => {
     <>
       {/* hero section */}
       <HeroSection onClickBmi={handleShowBmi} />
+      <Blogs />
+
       {/* AboutUs section */}
       <AboutUs />
 

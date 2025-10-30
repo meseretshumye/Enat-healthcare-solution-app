@@ -25,37 +25,37 @@ label {
   padding: 0;
 }
 
-.bmi-calc-section p {
+p {
   line-height: 1.5;
   font-weight: 400;
   color: hsl(215, 17%, 44%);
   font-size: 1rem;
 }
 
-.bmi-calc-section h1,
-.bmi-calc-section h2,
-.bmi-calc-section h3,
-.bmi-calc-section h4,
-.bmi-calc-section h5,
-.bmi-calc-section h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.1;
   font-weight: 600;
   color: hsl(215, 31%, 21%);
   font-family: "Inter", sans-serif !important;
 }
 
-.bmi-calc-section h2 {
+h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
 
-.bmi-calc-section h3 {
+h3 {
   font-size: 1.5rem;
   width: -moz-max-content;
   width: max-content;
 }
 
-.bmi-calc-section h4 {
+h4 {
   font-size: 1.25rem;
   display: inline;
 }
@@ -68,13 +68,13 @@ label {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-.bmi-calc-section ul,
-.bmi-calc-section ol ul[role="list"],
-.bmi-calc-section ol[role="list"] {
+ul,
+ol ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
-.bmi-calc-section a {
+a {
   text-decoration: none;
   display: block;
   max-width: -moz-fit-content;
@@ -87,28 +87,28 @@ html:focus-within {
 }
 
 /* A elements that don't have a class get default styles */
-.bmi-calc-section a:not([class]) {
+a:not([class]) {
   -webkit-text-decoration-skip: ink;
   text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
-.bmi-calc-section img,
-.bmi-calc-section picture {
+img,
+picture {
   max-width: 100%;
   display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
-.bmi-calc-section input,
-.bmi-calc-section button,
-.bmi-calc-section textarea,
-.bmi-calc-section select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
+/* @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
   }
@@ -120,16 +120,16 @@ html:focus-within {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
+} */
 /* Chrome, Safari, Edge, Opera */
-.bmi-calc-section input::-webkit-outer-spin-button,
-.bmi-calc-section input::-webkit-inner-spin-button {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 /* Firefox */
-.bmi-calc-section input[type="number"] {
+/* input[type="number"] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
@@ -147,26 +147,26 @@ html:focus-within {
   font-size: 1.5rem;
 }
 
-.bmi-calc-section input[type="number"]:focus {
+input[type="number"]:focus {
   outline: 1px solid hsl(227, 92%, 58%);
 }
 
-.bmi-calc-section input[type="number"]::-moz-placeholder {
+input[type="number"]::-moz-placeholder {
   font-size: 1.5rem;
   font-weight: 600;
   opacity: 0.25;
 }
 
-.bmi-calc-section input[type="number"]::placeholder {
+input[type="number"]::placeholder {
   font-size: 1.5rem;
   font-weight: 600;
   opacity: 0.25;
 }
 
-.bmi-calc-section label {
+label {
   display: block;
   cursor: pointer;
-}
+} */
 
 body {
   min-height: 100vh;
@@ -243,6 +243,24 @@ body {
   background-color: hsl(0, 0%, 100%);
   padding: 1.5rem;
   gap: 1.5rem;
+}
+
+.form-side #btn-submit {
+  display: block;
+  color: #fff;
+  background: linear-gradient(to right, #244cfd, #15e4fd);
+  font-family: "Inter", sans-serif !important;
+  text-transform: capitalize;
+  font-weight: 400;
+  padding: 16px 24px !important;
+  border-radius: 8px;
+  text-align: center;
+  outline: 0;
+  border: 0;
+}
+.form-side #btn-submit:hover {
+  color: #fff;
+  opacity: 0.8;
 }
 .calcBmi-hero-section .form-side .radios {
   display: flex;
@@ -530,7 +548,8 @@ body {
   justify-content: center;
   flex-direction: row;
   gap: 1rem;
-}
+} /*# sourceMappingURL=main.css.map */
+
 /*ONLY TABLET SIZE*/
 @media screen and (min-width: 48rem) {
   .calcBmi-hero-section {

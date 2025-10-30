@@ -3,11 +3,12 @@ import Home from "../pages/Home/Home";
 import AboutUs from "../components/AboutUs/AboutUs";
 import ServiceSection from "../components/Services/ServiceSection/ServiceSection";
 import NotFoundPage from "../pages/4O4/NotFoundPage";
-import UsersProfile from "../components/UsersProfile";
-import SingleUserProfile from "../components/Single UserProfile";
+import UsersProfile from "../components/UsersProfile/UsersProfile";
+import SingleUserProfile from "../components/UsersProfile/SingleUserProfile";
 import BmiCalculator from "../components/BmiCalulator/BmiCalculator";
-import Layout from "../layouts/Layout";
-
+import Layout from "../layouts/Layout/Layout";
+import BlogsPage from "../pages/BlogsPage/BlogsPage";
+import AdminDashboard from "../pages/AdminDashboard/AdminDashboard";
 const AppRoutes = () => {
   return (
     <>
@@ -22,11 +23,15 @@ const AppRoutes = () => {
           <Route path="/services" element={<ServiceSection />} />
           <Route path="/departments" element={<h1>Departments Page</h1>} />
           <Route path="/appointment" element={<h1>Appointment Page</h1>} />
+          <Route path="/blogs" element={<BlogsPage />} />
           {/* ✅ Parent route */}
           <Route path="/usersProfile" element={<UsersProfile />}>
             {/* ✅ Nested route renders inside <Outlet /> */}
             <Route path=":userId" element={<SingleUserProfile />} />
           </Route>
+          {/* admin dashboard routes*/}
+          <Route path="/dashboard" element={<AdminDashboard />} />
+
           {/* ✅ 404 fallback */}
           <Route path="*" element={<NotFoundPage />} />
         </Route>
