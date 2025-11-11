@@ -1,5 +1,4 @@
-import MainLogo from "../../../assets/images/logo/ehcs-logo.png";
-import logoSM from "../../../assets/images/logo/logo-icon-2.png";
+import { images } from "../../../constants/AssetsContainer";
 import { Link } from "react-router";
 const MainHeader = () => {
   return (
@@ -9,13 +8,19 @@ const MainHeader = () => {
         <section className="main-header-container">
           <section className="logo-wrapper">
             <Link to="/">
-              <img src={MainLogo} alt="enat-health-care-solutions-logo" />
+              <img
+                src={images.enatLogo}
+                alt="enat-health-care-solutions-logo"
+              />
             </Link>
           </section>
 
           <section className="logo-sm-wrapper">
             <Link to="/">
-              <img src={logoSM} alt="enat-health-care-solutions-logo-sm" />
+              <img
+                src={images.enatLogoSM}
+                alt="enat-health-care-solutions-logo-sm"
+              />
             </Link>
           </section>
 
@@ -38,6 +43,11 @@ const MainHeader = () => {
               </li>
               <li>
                 <Link to="/contact">Contact</Link>
+              </li>
+              <li>
+                <Link className="main-btn-light" to="/sign-in">
+                  Sign In
+                </Link>
               </li>
               <li>
                 <Link className="main-btn" to="/appointment">

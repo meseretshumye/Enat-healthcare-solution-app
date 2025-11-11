@@ -6,15 +6,17 @@ import NotFoundPage from "../pages/4O4/NotFoundPage";
 import UsersProfile from "../components/UsersProfile/UsersProfile";
 import SingleUserProfile from "../components/UsersProfile/SingleUserProfile";
 import BmiCalculator from "../components/BmiCalulator/BmiCalculator";
-import Layout from "../layouts/Layout/Layout";
-import BlogsPage from "../pages/BlogsPage/BlogsPage";
+import MainLayout from "../layouts/MainLayOut/MainLayout";
 import AdminDashboard from "../pages/AdminDashboard/AdminDashboard";
+import BlogsPage from "../pages/BlogsPage/BlogsPage";
+import SignIn from "../pages/Auth/SignIn/SignIn";
+import DashboardLayout from "../layouts/MainLayout/DashboardLayout/DashboardLayout";
 const AppRoutes = () => {
   return (
     <>
       <Routes>
         {/* ✅ Layout as shared parent for all nested routes */}
-        <Route element={<Layout />}>
+        <Route element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path="/BmiCalculator" element={<BmiCalculator />} />
           <Route path="/Contact" element={<h1>Contact Page</h1>} />
@@ -29,12 +31,16 @@ const AppRoutes = () => {
             {/* ✅ Nested route renders inside <Outlet /> */}
             <Route path=":userId" element={<SingleUserProfile />} />
           </Route>
-          {/* admin dashboard routes*/}
-          <Route path="/dashboard" element={<AdminDashboard />} />
-
-          {/* ✅ 404 fallback */}
-          <Route path="*" element={<NotFoundPage />} />
+          {/* auth routes */}
+          <Route path="/sign-in" element={<SignIn />} />
         </Route>
+        {/* admin dashboard routes*/}
+        <Route element={<DashboardLayout />}>
+          {/* main admin dashboard routes*/}
+          <Route path="/dashboard" element={<AdminDashboard />} />
+        </Route>
+        {/* ✅ 404 fallback */}
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
   );
