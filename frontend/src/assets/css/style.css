@@ -63,9 +63,11 @@ h6 {
   background: #f9f9fd;
   padding-block: 16px;
   padding-inline: 24px;
+  box-shadow: 0 1px 6px #2021243d;
 }
+
 .main-header-container {
-  max-width: 992px;
+  max-width: 1400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -157,8 +159,8 @@ h6 {
   opacity: 0.8;
 }
 
-.hero-content .main-btn-light {
-  display: inline;
+.hero-content a.main-btn-light {
+  display: block;
   color: #030a21;
   border: 1px solid transparent;
   border-image: var(--main-gradient) 1;
@@ -168,7 +170,7 @@ h6 {
   padding: 12px 24px !important;
   transition: var(--transition);
   border-radius: 4px;
-  margin: 0 0 0 12px !important;
+  margin-top: 12px;
   text-align: center;
 }
 .hero-content a.main-btn:hover {
@@ -312,7 +314,7 @@ h6 {
   z-index: 1;
 }
 .services-section .service-container {
-  max-width: 992px;
+  max-width: 1400px;
   display: flex;
   justify-content: space-between;
   margin: 0 7%;
@@ -321,7 +323,7 @@ h6 {
 }
 .services-section .service-item {
   position: relative;
-  text-align: center;
+  text-align: center !important;
   padding: 20px 24px 24px;
   transition: var(--transition);
   flex-basis: 100%;
@@ -333,7 +335,7 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
   margin: 0 auto;
   width: 80px;
   height: 80px;
@@ -399,7 +401,7 @@ h6 {
   z-index: 1;
 }
 .footer-links-container {
-  max-width: 992px;
+  max-width: 1400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -427,11 +429,12 @@ h6 {
   width: 100%;
   height: 100%;
 }
+
 /* .slogan-content {
   display: none;
 } */
 .slogan-content h4 {
-  color: #fff;
+  color: #fff !important;
   font-size: 1.125rem;
   font-weight: 400;
 }
@@ -476,7 +479,7 @@ h6 {
 }
 
 .sub-footer-links-container .sub-footer-links-item {
-  max-width: 992px;
+  max-width: 1400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -532,7 +535,7 @@ h6 {
   opacity: 1;
 }
 
-/* ******4O4 page section css***** */
+/* ======= 404 page section css  ======= */
 .container {
   max-width: 992px !important;
 }
@@ -543,11 +546,12 @@ h6 {
   background: var(--main-gradient);
   font-family: var(--secondary-font-family);
   text-transform: capitalize;
+  font-weight: 400;
   padding: 12px 24px !important;
+  transition: var(--transition);
   border-radius: 4px;
-  text-align: center;
+  text-align: center !;
 }
-
 .not-found-page-section div.main-btn a {
   color: #fff;
   text-align: center;
@@ -555,8 +559,13 @@ h6 {
 }
 .not-found-page-section div.main-btn a:hover {
   color: #fff;
+  opacity: 0.8;
 }
+
 /* mobile device footer css */
+.md-footer-links-wrapper h2, .md-footer-links-wrapper h4 {
+  color: #fff !important;
+}
 .md-footer-links-wrapper .accordion .accordion-item {
   background-color: #12151f !important;
   color: #fff !important;
@@ -574,6 +583,8 @@ h6 {
 .md-footer-links-wrapper .accordion .accordion-button:not(.collapsed)::after {
   background-image: url("../icons/minus-icon.svg");
 }
+
+
 
 /* ======= media query css  ======= */
 
@@ -593,7 +604,7 @@ h6 {
   }
   /* ======= hero section css  ======= */
   .hero-section-container {
-    width: 992px;
+    width: 1400px;
     margin: 0 auto;
     padding-inline: 24px;
   }
@@ -605,13 +616,12 @@ h6 {
   }
   .hero-content a.main-btn {
     display: inline-block;
-    margin-right: 12px !important;
   }
 
   .hero-content a.main-btn-light {
     display: inline-block;
-    margin: 0 0 0 12px !important;
-    padding: 12px 24px !important;
+    margin-left: 12px;
+    margin-top: 0;
   }
 }
 @media (min-width: 768px) {
@@ -624,7 +634,7 @@ h6 {
     border-bottom: 1px solid rgb(232, 237, 241);
   }
   .top-header-container {
-    max-width: 992px;
+    max-width: 1400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -682,7 +692,7 @@ h6 {
   }
   /* ======= about us  section css  ======= */
   /* .about-us-container {
-    max-width: 992px;
+    max-width: 1400px;
     flex-direction: row;
     padding-inline: 24px;
     margin: 0 auto;
@@ -708,7 +718,7 @@ h6 {
   }
 
   .services-section .service-item {
-    flex-basis: 315px;
+    flex-basis: 445px;
   }
 
   /* ======= footer section css  ======= */
@@ -795,4 +805,7 @@ h6 {
   .services-section .service-container {
     margin: 0 auto;
   }
+  .services-section .service-item .description {
+  padding-inline: 50px;
+}
 }

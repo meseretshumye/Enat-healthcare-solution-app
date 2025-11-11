@@ -10,7 +10,7 @@ const ServicesItem = ({
       <section className="service-icon">
         <i className={iconClass}></i>
       </section>
-      <a href={link} className="stretched-link">
+      <a href={link} className="">
         <h3>{title}</h3>
       </a>
       <p className="tag-line">{tagLine}</p>
