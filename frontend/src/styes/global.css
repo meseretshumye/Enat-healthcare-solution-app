@@ -329,8 +329,9 @@ textarea.form-control {
   }
 }
 /* *** dashboard filter css */
-.dashboard {
+.dashboard.dashboard-section {
   position: relative !important;
+  z-index: 1;
 }
 .dashboard .filter {
   position: absolute;

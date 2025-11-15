@@ -7,10 +7,12 @@ import UsersProfile from "../components/UsersProfile/UsersProfile";
 import SingleUserProfile from "../components/UsersProfile/SingleUserProfile";
 import BmiCalculator from "../components/BmiCalulator/BmiCalculator";
 import MainLayout from "../layouts/MainLayOut/MainLayout";
-import AdminDashboard from "../pages/AdminDashboard/AdminDashboard";
+import AdminDashboard from "../features/dashboard/pages/AdminDashboard/AdminDashboard";
 import BlogsPage from "../pages/BlogsPage/BlogsPage";
-import SignIn from "../pages/Auth/SignIn/SignIn";
+import SignIn from "../features/auth/pages/SignIn/SignIn";
 import DashboardLayout from "../layouts/MainLayout/DashboardLayout/DashboardLayout";
+import AddEmployee from "../features/dashboard/pages/AddEmployee/AddEmployee";
+
 const AppRoutes = () => {
   return (
     <>
@@ -33,12 +35,16 @@ const AppRoutes = () => {
           </Route>
           {/* auth routes */}
           <Route path="/sign-in" element={<SignIn />} />
+          {/* ✅ 404 fallback */}
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
         {/* admin dashboard routes*/}
         <Route element={<DashboardLayout />}>
           {/* main admin dashboard routes*/}
-          <Route path="/dashboard" element={<AdminDashboard />} />
+          <Route path="/dashboard" element={<AdminDashboard MainLayout />} />
+          <Route path="/dashboard/sign-up" element={<AddEmployee />} />
         </Route>
+
         {/* ✅ 404 fallback */}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

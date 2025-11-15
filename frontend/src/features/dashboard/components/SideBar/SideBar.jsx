@@ -2,7 +2,7 @@ import "./SideBar.css";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { PiSignOut } from "react-icons/pi";
 import { Link } from "react-router";
-import { signOutService } from "../../auth/services/auth.service";
+import { signOutService } from "../../../auth/services/auth.service";
 
 const SideBar = ({ sidebarConfig }) => {
   // user role fetch from state
