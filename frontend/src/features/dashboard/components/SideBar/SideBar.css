@@ -64,7 +64,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to right, #244cfd,#247efd, #15e4fd);
+  background: linear-gradient(to right, #244cfd, #247efd, #15e4fd);
   border-radius: 50%;
   width: 1.25rem;
   height: 1.25rem;
@@ -101,7 +101,7 @@
 }
 .sidebar-nav .nav-content li:is(:hover, :focus) {
   background: #f6f9ff;
-  border-left: 2px solid #fd5444;
+  border-left: 2px solid #007bff;
 }
 .sidebar-nav .nav-content li:first-child {
   margin-top: 4px;
@@ -157,7 +157,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to right, #244cfd,#247efd, #15e4fd);
+  background: linear-gradient(to right, #244cfd, #247efd, #15e4fd);
   border-radius: 50%;
   width: 1.25rem;
   height: 1.25rem;

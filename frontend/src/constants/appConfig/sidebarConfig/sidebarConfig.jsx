@@ -20,6 +20,15 @@ export const sidebarConfig = {
       roles: [0, 1, 2, 3, 4, 5],
     },
     {
+      label: "Manage Teams",
+      icon: <MdOutlineGroups className="sidebar-icon" />,
+      path: "/dashboard/teams",
+      roles: [0, 1, 2, 3, 4, 5],
+      subItems: [
+        { label: "Teams", path: "/dashboard/teams", roles: [0, 1, 2, 3, 4, 5] },
+      ],
+    },
+    {
       label: "Manage Employees",
       icon: <AiOutlineUsergroupAdd className="sidebar-icon" />,
       path: "/dashboard/roles",
@@ -44,15 +53,6 @@ export const sidebarConfig = {
           path: "/dashboard/assign-roles",
           roles: [0, 1, 2, 3, 4, 5],
         },
-      ],
-    },
-    {
-      label: "Manage Teams",
-      icon: <MdOutlineGroups className="sidebar-icon" />,
-      path: "/dashboard/teams",
-      roles: [0, 1, 2, 3, 4, 5],
-      subItems: [
-        { label: "Teams", path: "/dashboard/teams", roles: [0, 1, 2, 3, 4, 5] },
       ],
     },
 

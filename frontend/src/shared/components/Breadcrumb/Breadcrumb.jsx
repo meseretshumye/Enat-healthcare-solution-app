@@ -1,6 +1,6 @@
-import { Link } from 'react-router';
-import styles from './Breadcrumb.module.css';
-import { MdOutlineChevronRight } from 'react-icons/md';
+import { Link } from "react-router";
+import styles from "./Breadcrumb.module.css";
+import { MdOutlineChevronRight } from "react-icons/md";
 const Breadcrumb = ({ items, uniqueStyle }) => {
   return (
     <nav aria-label="breadcrumb">
@@ -19,10 +19,7 @@ const Breadcrumb = ({ items, uniqueStyle }) => {
             {index !== items.length - 1 ? (
               <>
                 {/* Icon in front of text */}
-                <Link
-                  className={styles["breadcrumb-link"]}
-                  to={item.path}
-                >
+                <Link className={styles["breadcrumb-link"]} to={item.path}>
                   {item?.behindIcon && (
                     <span
                       className={`${styles["breadcrumb-behind-icon"]} me-2`}
