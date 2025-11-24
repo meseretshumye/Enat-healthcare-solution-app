@@ -22,7 +22,7 @@ const Home = () => {
     <>
       {/* hero section */}
       <HeroSection onClickBmi={handleShowBmi} />
-      <Blogs />
+      {/* <Blogs /> */}
 
       {/* AboutUs section */}
       <AboutUs />

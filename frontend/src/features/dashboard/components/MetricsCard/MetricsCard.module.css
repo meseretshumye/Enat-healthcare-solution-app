@@ -26,7 +26,7 @@
 }
 
 .dashboard-card .app-statistics-card .card-icon {
-  color: #247efd;
+  color: red;
   background: #f6f9ff;
   transition: all 0.7s ease;
 }

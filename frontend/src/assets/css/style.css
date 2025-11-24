@@ -91,13 +91,14 @@ h6 {
 }
 
 /* ======= hamburger menu css =======  */
-.hamburger-menu {
+/* .hamburger-menu {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .hamburger-menu i {
   font-size: 32px;
-  color: #12151fb9;
+  color: #007bff;
   padding: 4px 8px;
   background: transparent;
   border-radius: 4px;
@@ -107,6 +108,72 @@ h6 {
 .hamburger-menu i:is(:hover, :focus) {
   background: var(--main-gradient);
   color: #fff;
+}
+
+.hamburger-menu .btn-primary:is(:hover, :focus) {
+  box-shadow: none;
+  color: #cddfff;} */
+.hamburger-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-btn {
+  background: transparent;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.hamburger-btn i {
+  font-size: 28px;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+ /* Hover + Focus + Active (same gradient as screenshot)  */
+.hamburger-menu button:is(:hover, :focus, :active) {
+ background: var(--main-gradient);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* icon changes to white when active */
+.hamburger-menu button:is(:hover, :focus, :active) i {
+  color: #fff;
+}
+
+/* remove white browser focus outline */
+.hamburger-menu button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.mobile-nav-bar .nav-items li {
+  border-bottom: 1px solid rgb(156, 151, 151);
+  padding-bottom: 8px; /* optional – adds spacing */
+}
+
+.mobile-nav-bar ul li a {
+  color: #111616 !important;
+  opacity: 0.75;
+}
+.mobile-nav-bar ul li a:focus {
+  opacity: 1;
+}
+.mobile-nav-bar .nav-items li a.main-btn {
+  color: #fff !important;
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: var(--main-gradient);
+  font-family: var(--secondary-font-familly);
+  font-weight: 400;
+  padding: 12px 24px !important;
+  transition: var(--transition);
+  border-radius: 4px;
 }
 
 /* ======= hero section css  ======= */
@@ -563,7 +630,8 @@ h6 {
 }
 
 /* mobile device footer css */
-.md-footer-links-wrapper h2, .md-footer-links-wrapper h4 {
+.md-footer-links-wrapper h2,
+.md-footer-links-wrapper h4 {
   color: #fff !important;
 }
 .md-footer-links-wrapper .accordion .accordion-item {
@@ -583,8 +651,6 @@ h6 {
 .md-footer-links-wrapper .accordion .accordion-button:not(.collapsed)::after {
   background-image: url("../icons/minus-icon.svg");
 }
-
-
 
 /* ======= media query css  ======= */
 
@@ -806,6 +872,6 @@ h6 {
     margin: 0 auto;
   }
   .services-section .service-item .description {
-  padding-inline: 50px;
-}
+    padding-inline: 50px;
+  }
 }
