@@ -90,29 +90,6 @@ h6 {
   display: none;
 }
 
-/* ======= hamburger menu css =======  */
-/* .hamburger-menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hamburger-menu i {
-  font-size: 32px;
-  color: #007bff;
-  padding: 4px 8px;
-  background: transparent;
-  border-radius: 4px;
-  transition: all 0.5s ease-in-out;
-  cursor: pointer;
-}
-.hamburger-menu i:is(:hover, :focus) {
-  background: var(--main-gradient);
-  color: #fff;
-}
-
-.hamburger-menu .btn-primary:is(:hover, :focus) {
-  box-shadow: none;
-  color: #cddfff;} */
 .hamburger-menu {
   display: flex;
   align-items: center;
@@ -152,10 +129,13 @@ h6 {
 }
 
 .mobile-nav-bar .nav-items li {
-  border-bottom: 1px solid rgb(156, 151, 151);
-  padding-bottom: 8px; /* optional – adds spacing */
+  border-bottom: 1px solid #dadce0d1;
+  padding-block: 8px; /* optional – adds spacing */
+  
 }
-
+ .mobile-nav-bar .nav-items li:first-child {
+  padding-top: 0;
+ }
 .mobile-nav-bar ul li a {
   color: #111616 !important;
   opacity: 0.75;
@@ -174,7 +154,19 @@ h6 {
   padding: 12px 24px !important;
   transition: var(--transition);
   border-radius: 4px;
+  white-space: nowrap;
 }
+
+.mobil-header-container .offcanvas-logo-wrapper {
+  background: #f9f9fd;
+  padding-block: 16px;
+  padding-inline: 16px;
+  box-shadow: 0 1px 6px #2021243d;
+}
+.mobil-header-container .offcanvas-logo-wrapper .btn-close:focus {
+  box-shadow: 0 0 0 0.125rem rgba(218, 220, 224, 0.81);
+}
+
 
 /* ======= hero section css  ======= */
 .hero-section {
@@ -229,19 +221,36 @@ h6 {
 .hero-content a.main-btn-light {
   display: block;
   color: #030a21;
-  border: 1px solid transparent;
-  border-image: var(--main-gradient) 1;
   font-family: var(--secondary-font-family);
   text-transform: capitalize;
   font-weight: 400;
   padding: 12px 24px !important;
   transition: var(--transition);
-  border-radius: 4px;
   margin-top: 12px;
   text-align: center;
+  border-radius: 4px;
+  border: 1px solid transparent; /* needed for border-box */
+  background:
+    /* inner background (button fill) */ linear-gradient(
+        #ffffff,
+        #ffffff
+      )
+      padding-box,
+    /* outer gradient border */ linear-gradient(to right, #244cfd, #15e4fd)
+      border-box;
 }
-.hero-content a.main-btn:hover {
-  color: #fff;
+
+.hero-content a.main-btn-light:hover {
+  background:
+    /* inner background (now gradient too) */ linear-gradient(
+        to right,
+        #244cfd,
+        #15e4fd
+      )
+      padding-box,
+    /* outer gradient border (same as before) */
+      linear-gradient(to right, #244cfd, #15e4fd) border-box;
+  color: #fff !important;
   opacity: 0.8;
 }
 
@@ -606,7 +615,8 @@ h6 {
 .container {
   max-width: 992px !important;
 }
-.not-found-page-section div.main-btn {
+.not-found-page-section div.main-btn,
+.unauthorized-section div.main-btn {
   display: block;
   width: 210px;
   color: #fff;
@@ -619,12 +629,14 @@ h6 {
   border-radius: 4px;
   text-align: center !;
 }
-.not-found-page-section div.main-btn a {
+.not-found-page-section div.main-btn a,
+.unauthorized-section div.main-btn a  {
   color: #fff;
   text-align: center;
   max-width: none;
 }
-.not-found-page-section div.main-btn a:hover {
+.not-found-page-section div.main-btn a:hover,
+.unauthorized-section div.main-btn a:hover {
   color: #fff;
   opacity: 0.8;
 }
@@ -848,6 +860,7 @@ h6 {
     padding: 12px 24px !important;
     transition: var(--transition);
     border-radius: 4px;
+    white-space: nowrap;
   }
   .main-header .nav-items li a.main-btn:hover {
     color: #fff;
